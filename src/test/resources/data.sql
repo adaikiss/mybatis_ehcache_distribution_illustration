@@ -1,0 +1,10 @@
+insert into `foo`(name) values ('John Watson');
+insert into `foo`(name) values ('Sherlock Holmes');
+insert into `foo`(name) values ('Moriarty');
+insert into `foo`(name) values ('Passerby A');
+insert into `foo`(name) values ('Passerby B');
+insert into `foo`(name) values ('Passerby C');
+insert into `foo`(name) values ('Passerby D');
+insert into `foo`(name) values ('Passerby E');
+insert into `foo`(name) values ('Passerby F');
+insert into `foo`(name) values ('Passerby G');

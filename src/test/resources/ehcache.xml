@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+	monitoring="autodetect" dynamicConfig="true" name="mybatis">
+	<!-- http://ehcache.org/ehcache.xml -->
+	<cacheManagerPeerProviderFactory
+		class="net.sf.ehcache.distribution.RMICacheManagerPeerProviderFactory"
+		properties="peerDiscovery=manual,rmiUrls=//40001/mybatis rmiUrls=//40002/mybatis rmiUrls=//40003/mybatis rmiUrls=//40004/mybatis" />
+	<cacheManagerPeerListenerFactory
+		class="net.sf.ehcache.distribution.RMICacheManagerPeerListenerFactory"
+		properties="port=40000" />
+	<diskStore path="/var/caches/mybatis/" />
+	<defaultCache maxBytesLocalHeap="5m" eternal="false"
+		timeToIdleSeconds="3600" timeToLiveSeconds="3600" overflowToDisk="true"
+		maxBytesLocalDisk="50m" diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120" memoryStoreEvictionPolicy="LFU" />
+</ehcache>
